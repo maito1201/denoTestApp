@@ -1,0 +1,9 @@
+version: '3'
+volumes:
+  vendor:
+services:
+  app:
+    build: .
+    command: bash -c "source ~/.bash_profile && deno run https://deno.land/std/examples/welcome.ts"
+    ports:
+      - "8000:8000"
