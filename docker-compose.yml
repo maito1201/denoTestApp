@@ -4,6 +4,8 @@ volumes:
 services:
   app:
     build: .
-    command: bash -c "source ~/.bash_profile && deno run https://deno.land/std/examples/welcome.ts"
+    command: bash -c "source ~/.bash_profile && deno run --allow-net --allow-read app/main.js"
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
