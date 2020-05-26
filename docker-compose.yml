@@ -4,7 +4,7 @@ volumes:
 services:
   app:
     build: .
-    command: bash -c "source ~/.bash_profile && deno run --allow-net --allow-read app/main.js"
+    command: bash -c "source ~/.bash_profile && deno run --allow-net --allow-read app/main.ts"
     ports:
       - "8000:8000"
     volumes:
